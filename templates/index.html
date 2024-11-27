@@ -4,23 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulateur de Mariage Stable</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+            color: #555;
+        }
+
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenue dans le simulateur de mariage stable</h1>
-    <form method="POST">
-        <label for="num_men">Nombre d'hommes :</label>
-        <input type="number" id="num_men" name="num_men" required><br><br>
+    <header>
+        <h1>Simulateur de Mariage Stable</h1>
+    </header>
+    <main>
+        <form method="POST">
+            <label for="num_men">Nombre d'hommes :</label>
+            <input type="number" id="num_men" name="num_men" required>
 
-        <label for="num_women">Nombre de femmes :</label>
-        <input type="number" id="num_women" name="num_women" required><br><br>
+            <label for="num_women">Nombre de femmes :</label>
+            <input type="number" id="num_women" name="num_women" required>
 
-        <label for="men_preferences">Préférences des hommes (format: Homme: X,{Y;Z},...):</label><br>
-        <textarea id="men_preferences" name="men_preferences" rows="5" cols="40" required></textarea><br><br>
+            <label for="men_preferences">Préférences des hommes :</label>
+            <textarea id="men_preferences" name="men_preferences" rows="5" placeholder="A: X,{Y;Z},..." required></textarea>
 
-        <label for="women_preferences">Préférences des femmes (format: Femme: {A;B},C,...):</label><br>
-        <textarea id="women_preferences" name="women_preferences" rows="5" cols="40" required></textarea><br><br>
+            <label for="women_preferences">Préférences des femmes :</label>
+            <textarea id="women_preferences" name="women_preferences" rows="5" placeholder="X: {A;B},C,..." required></textarea>
 
-        <button type="submit">Calculer</button>
-    </form>
+            <button type="submit">Calculer les appariements</button>
+        </form>
+    </main>
+    <footer>
+        <p>Projet créé avec ❤️ par <a href="https://github.com">Votre Nom</a></p>
+    </footer>
 </body>
 </html>

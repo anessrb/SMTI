@@ -3,15 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats</title>
+    <title>Résultats des Appariements</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        li:hover {
+            background-color: #f1f1f1;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Résultats des appariements stables</h1>
-    <ul>
-        {% for woman, man in results.items() %}
-        <li>{{ man }} ↔ {{ woman }}</li>
-        {% endfor %}
-    </ul>
-    <a href="/">Revenir à l'accueil</a>
+    <header>
+        <h1>Résultats des Appariements</h1>
+    </header>
+    <main>
+        <ul>
+            {% for woman, man in results.items() %}
+            <li><strong>{{ man }}</strong> ↔ <strong>{{ woman }}</strong></li>
+            {% endfor %}
+        </ul>
+        <a href="/">Revenir à l'accueil</a>
+    </main>
+    <footer>
+        <p>Projet créé avec ❤️ par <a href="https://github.com">Votre Nom</a></p>
+    </footer>
 </body>
 </html>
