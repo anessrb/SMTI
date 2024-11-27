@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur de Mariage Stable</title>
+</head>
+<body>
+    <h1>Bienvenue dans le simulateur de mariage stable</h1>
+    <form method="POST">
+        <label for="num_men">Nombre d'hommes :</label>
+        <input type="number" id="num_men" name="num_men" required><br><br>
+
+        <label for="num_women">Nombre de femmes :</label>
+        <input type="number" id="num_women" name="num_women" required><br><br>
+
+        <label for="men_preferences">Préférences des hommes (format: Homme: X,{Y;Z},...):</label><br>
+        <textarea id="men_preferences" name="men_preferences" rows="5" cols="40" required></textarea><br><br>
+
+        <label for="women_preferences">Préférences des femmes (format: Femme: {A;B},C,...):</label><br>
+        <textarea id="women_preferences" name="women_preferences" rows="5" cols="40" required></textarea><br><br>
+
+        <button type="submit">Calculer</button>
+    </form>
+</body>
+</html>

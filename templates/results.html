@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats</title>
+</head>
+<body>
+    <h1>Résultats des appariements stables</h1>
+    <ul>
+        {% for woman, man in results.items() %}
+        <li>{{ man }} ↔ {{ woman }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Revenir à l'accueil</a>
+</body>
+</html>
